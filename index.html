@@ -11,7 +11,7 @@
     
     <!-- Open Graph -->
     <meta property="og:title" content="Olivier Bergeron | Chef Privé à Domicile">
-    <meta property="og:description" content="L'Art culinaire prémium À Votre Table. Chef privé haut de gamme en Provence et international.">
+    <meta property="og:description" content="L'Art Culinaire À Votre Table. Chef privé haut de gamme en Provence et international.">
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://olivierbergeron-chef.fr">
     <meta property="og:image" content="https://images.unsplash.com/photo-1414235077428-338989a2e8c0?w=1200">
@@ -23,7 +23,7 @@
     <meta name="twitter:image" content="https://images.unsplash.com/photo-1414235077428-338989a2e8c0?w=1200">
     
     <!-- Favicon -->
-    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>👨‍🍳</text></svg>">
+    <link rel="icon" href="images/logo.png">
     
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -67,36 +67,15 @@
             "@type": "OfferCatalog",
             "name": "Services de Chef Privé",
             "itemListElement": [
-                {
-                    "@type": "Offer",
-                    "itemOffered": {
-                        "@type": "Service",
-                        "name": "Dîner Privé à Domicile"
-                    }
-                },
-                {
-                    "@type": "Offer",
-                    "itemOffered": {
-                        "@type": "Service",
-                        "name": "Événements & Réceptions"
-                    }
-                },
-                {
-                    "@type": "Offer",
-                    "itemOffered": {
-                        "@type": "Service",
-                        "name": "Repas en Famille"
-                    }
-                }
+                {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Dîner Privé à Domicile"}},
+                {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Événements & Réceptions"}},
+                {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Repas en Famille"}}
             ]
         }
     }
     </script>
     
     <style>
-        /* ═══════════════════════════════════════════════════════════════
-           VARIABLES CSS
-           ═══════════════════════════════════════════════════════════════ */
         :root {
             --noir-profond: #0A0A0A;
             --noir-pur: #050505;
@@ -118,9 +97,6 @@
             --transition-smooth: cubic-bezier(0.25, 0.46, 0.45, 0.94);
         }
         
-        /* ═══════════════════════════════════════════════════════════════
-           RESET & BASE
-           ═══════════════════════════════════════════════════════════════ */
         *, *::before, *::after {
             margin: 0;
             padding: 0;
@@ -138,7 +114,6 @@
             color: var(--blanc-creme);
             line-height: 1.6;
             overflow-x: hidden;
-            cursor: none;
         }
         
         ::selection {
@@ -146,75 +121,14 @@
             color: var(--noir-pur);
         }
         
-        /* ═══════════════════════════════════════════════════════════════
-           CURSEUR PERSONNALISÉ
-           ═══════════════════════════════════════════════════════════════ */
-        .cursor {
-            position: fixed;
-            width: 20px;
-            height: 20px;
-            border: 2px solid var(--or-champagne);
-            border-radius: 50%;
-            pointer-events: none;
-            z-index: 9999;
-            transform: translate(-50%, -50%);
-            transition: width 0.3s var(--transition-elegant), 
-                        height 0.3s var(--transition-elegant),
-                        background 0.3s var(--transition-elegant),
-                        border-color 0.3s var(--transition-elegant);
-            mix-blend-mode: difference;
-        }
-        
-        .cursor.hover {
-            width: 50px;
-            height: 50px;
-            background: rgba(201, 168, 76, 0.1);
-            border-color: var(--or-brillant);
-        }
-        
-        .cursor-dot {
-            position: fixed;
-            width: 6px;
-            height: 6px;
-            background: var(--or-champagne);
-            border-radius: 50%;
-            pointer-events: none;
-            z-index: 9999;
-            transform: translate(-50%, -50%);
-        }
-        
-        .cursor-trail {
-            position: fixed;
-            width: 8px;
-            height: 8px;
-            background: rgba(201, 168, 76, 0.3);
-            border-radius: 50%;
-            pointer-events: none;
-            z-index: 9998;
-            transform: translate(-50%, -50%);
-            transition: opacity 0.5s ease;
-        }
-        
-        /* Hide custom cursor on touch devices */
-        @media (pointer: coarse) {
-            .cursor, .cursor-dot, .cursor-trail {
-                display: none;
-            }
-            body {
-                cursor: auto;
-            }
-        }
-        
-        /* ═══════════════════════════════════════════════════════════════
-           NAVBAR
-           ═══════════════════════════════════════════════════════════════ */
+        /* NAVBAR */
         .navbar {
             position: fixed;
             top: 0;
             left: 0;
             width: 100%;
             z-index: 1000;
-            padding: 1.5rem 3rem;
+            padding: 1rem 3rem;
             display: flex;
             justify-content: space-between;
             align-items: center;
@@ -225,51 +139,31 @@
             background: rgba(10, 10, 10, 0.95);
             backdrop-filter: blur(20px);
             -webkit-backdrop-filter: blur(20px);
-            padding: 1rem 3rem;
+            padding: 0.8rem 3rem;
             box-shadow: 0 4px 30px rgba(0, 0, 0, 0.5);
         }
         
         .logo {
             display: flex;
-            flex-direction: column;
-            align-items: flex-start;
+            align-items: center;
             text-decoration: none;
         }
         
-        .logo-monogram {
-            font-family: var(--font-titres);
-            font-size: 2.5rem;
-            font-weight: 600;
-            color: var(--or-champagne);
-            line-height: 1;
-            transition: transform 0.5s var(--transition-elegant);
+        .logo img {
+            height: 60px;
+            width: auto;
+            transition: transform 0.3s ease;
         }
         
-        .logo:hover .logo-monogram {
-            transform: rotateY(15deg) rotateX(5deg);
-        }
-        
-        .logo-text {
-            font-family: var(--font-titres);
-            font-size: 1rem;
-            color: var(--blanc-creme);
-            letter-spacing: 3px;
-            text-transform: uppercase;
-            margin-top: 0.2rem;
-        }
-        
-        .logo-sub {
-            font-family: var(--font-sous-titres);
-            font-size: 0.75rem;
-            color: var(--or-champagne);
-            font-style: italic;
-            letter-spacing: 2px;
+        .logo:hover img {
+            transform: scale(1.05);
         }
         
         .nav-links {
             display: flex;
             gap: 2.5rem;
             list-style: none;
+            align-items: center;
         }
         
         .nav-links a {
@@ -280,6 +174,7 @@
             position: relative;
             padding: 0.5rem 0;
             transition: color 0.3s ease;
+            letter-spacing: 1px;
         }
         
         .nav-links a::after {
@@ -302,6 +197,21 @@
         .nav-links a:hover::after {
             transform: scaleX(1);
             transform-origin: left;
+        }
+        
+        .nav-phone {
+            font-family: var(--font-corps);
+            font-size: 0.95rem;
+            color: var(--blanc-creme);
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            transition: color 0.3s ease;
+        }
+        
+        .nav-phone:hover {
+            color: var(--or-champagne);
         }
         
         .nav-cta {
@@ -344,7 +254,6 @@
             left: 0;
         }
         
-        /* Hamburger Menu */
         .hamburger {
             display: none;
             flex-direction: column;
@@ -372,7 +281,6 @@
             transform: rotate(-45deg) translate(6px, -6px);
         }
         
-        /* Mobile Menu */
         .mobile-menu {
             position: fixed;
             top: 0;
@@ -425,9 +333,7 @@
             color: var(--or-champagne);
         }
         
-        /* ═══════════════════════════════════════════════════════════════
-           HERO SECTION
-           ═══════════════════════════════════════════════════════════════ */
+        /* HERO SECTION */
         .hero {
             position: relative;
             min-height: 100vh;
@@ -443,7 +349,7 @@
             left: 0;
             width: 100%;
             height: 100%;
-            background-image: url('https://images.unsplash.com/photo-1414235077428-338989a2e8c0?w=1920&q=80');
+            background-image: url('images/presta-08.jpg');
             background-size: cover;
             background-position: center;
             animation: kenBurns 20s ease-in-out infinite alternate;
@@ -468,7 +374,6 @@
             );
         }
         
-        /* Particules dorées */
         .particles-container {
             position: absolute;
             top: 0;
@@ -563,7 +468,6 @@
             }
         }
         
-        /* Ligne dorée SVG animée */
         .hero-line {
             width: 200px;
             height: 2px;
@@ -587,9 +491,7 @@
         }
         
         @keyframes drawLine {
-            to {
-                stroke-dashoffset: 0;
-            }
+            to { stroke-dashoffset: 0; }
         }
         
         @keyframes fadeIn {
@@ -609,6 +511,16 @@
         .hero-subtitle strong {
             color: var(--or-champagne);
             font-weight: 500;
+        }
+        
+        .hero-location {
+            font-family: var(--font-corps);
+            font-size: 0.9rem;
+            color: var(--or-champagne);
+            letter-spacing: 2px;
+            margin-top: 2rem;
+            opacity: 0;
+            animation: fadeInUp 1s ease 2.2s forwards;
         }
         
         @keyframes fadeInUp {
@@ -659,12 +571,7 @@
             left: -100%;
             width: 100%;
             height: 100%;
-            background: linear-gradient(
-                90deg,
-                transparent,
-                rgba(255, 255, 255, 0.3),
-                transparent
-            );
+            background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.3), transparent);
             transition: left 0.6s ease;
         }
         
@@ -723,17 +630,15 @@
             50% { transform: translateX(-50%) translateY(10px); }
         }
         
-        /* ═══════════════════════════════════════════════════════════════
-           SECTIONS COMMUNES
-           ═══════════════════════════════════════════════════════════════ */
+        /* SECTIONS COMMUNES */
         section {
-            padding: 6rem 2rem;
+            padding: 5rem 2rem;
             position: relative;
         }
         
         .section-header {
             text-align: center;
-            margin-bottom: 4rem;
+            margin-bottom: 3rem;
         }
         
         .section-title {
@@ -761,7 +666,7 @@
             display: flex;
             align-items: center;
             justify-content: center;
-            margin: 2rem 0;
+            margin: 0;
         }
         
         .section-divider svg {
@@ -780,7 +685,6 @@
             fill: var(--or-champagne);
         }
         
-        /* Animation reveal au scroll */
         .reveal {
             opacity: 0;
             transform: translateY(30px);
@@ -798,9 +702,7 @@
         .reveal-delay-4 { transition-delay: 0.4s; }
         .reveal-delay-5 { transition-delay: 0.5s; }
         
-        /* ═══════════════════════════════════════════════════════════════
-           STATS SECTION
-           ═══════════════════════════════════════════════════════════════ */
+        /* STATS SECTION */
         .stats-section {
             background: var(--noir-pur);
             padding: 4rem 2rem;
@@ -847,9 +749,7 @@
             text-transform: uppercase;
         }
         
-        /* ═══════════════════════════════════════════════════════════════
-           EXPERIENCE SECTION
-           ═══════════════════════════════════════════════════════════════ */
+        /* EXPERIENCE SECTION */
         .experience-section {
             background: var(--noir-profond);
         }
@@ -906,7 +806,6 @@
             z-index: -1;
         }
         
-        /* Timeline */
         .timeline {
             position: relative;
             max-width: 1000px;
@@ -1013,421 +912,7 @@
             color: rgba(245, 240, 232, 0.7);
         }
         
-        /* ═══════════════════════════════════════════════════════════════
-           PRESTATIONS SECTION
-           ═══════════════════════════════════════════════════════════════ */
-        .prestations-section {
-            background: linear-gradient(180deg, var(--noir-profond) 0%, var(--noir-pur) 100%);
-        }
-        
-        .prestations-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-            gap: 2rem;
-            max-width: 1200px;
-            margin: 0 auto;
-        }
-        
-        .prestation-card {
-            background: var(--noir-card);
-            border: 1px solid var(--gris-bordure);
-            border-radius: 4px;
-            padding: 2.5rem;
-            text-align: center;
-            transition: all 0.4s var(--transition-elegant);
-            position: relative;
-            overflow: hidden;
-        }
-        
-        .prestation-card::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 3px;
-            background: linear-gradient(90deg, transparent, var(--or-champagne), transparent);
-            transform: scaleX(0);
-            transition: transform 0.4s var(--transition-elegant);
-        }
-        
-        .prestation-card:hover {
-            border-color: var(--or-champagne);
-            transform: translateY(-10px) scale(1.02);
-            box-shadow: 0 20px 40px rgba(201, 168, 76, 0.15);
-        }
-        
-        .prestation-card:hover::before {
-            transform: scaleX(1);
-        }
-        
-        .prestation-icon {
-            width: 80px;
-            height: 80px;
-            background: rgba(201, 168, 76, 0.1);
-            border: 1px solid var(--or-champagne);
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            margin: 0 auto 1.5rem;
-            font-size: 2rem;
-            color: var(--or-champagne);
-            transition: all 0.4s var(--transition-elegant);
-            animation: iconPulse 3s ease-in-out infinite;
-        }
-        
-        @keyframes iconPulse {
-            0%, 100% { transform: scale(1); }
-            50% { transform: scale(1.05); }
-        }
-        
-        .prestation-card:hover .prestation-icon {
-            background: var(--or-champagne);
-            color: var(--noir-pur);
-            animation: none;
-        }
-        
-        .prestation-title {
-            font-family: var(--font-titres);
-            font-size: 1.5rem;
-            color: var(--blanc-creme);
-            margin-bottom: 1rem;
-        }
-        
-        .prestation-desc {
-            font-family: var(--font-corps);
-            font-size: 0.95rem;
-            color: rgba(245, 240, 232, 0.7);
-            line-height: 1.7;
-            margin-bottom: 1.5rem;
-        }
-        
-        .prestation-link {
-            font-family: var(--font-corps);
-            font-size: 0.85rem;
-            color: var(--or-champagne);
-            text-decoration: none;
-            display: inline-flex;
-            align-items: center;
-            gap: 0.5rem;
-            transition: all 0.3s ease;
-        }
-        
-        .prestation-link:hover {
-            gap: 1rem;
-            color: var(--or-brillant);
-        }
-        
-        /* ═══════════════════════════════════════════════════════════════
-           LOCAL SECTION
-           ═══════════════════════════════════════════════════════════════ */
-        .local-section {
-            background: var(--noir-pur);
-            position: relative;
-            overflow: hidden;
-        }
-        
-        .local-section::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background-image: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M30 5c-2 0-4 1-5 3-1 2-1 4 0 6 1 2 3 3 5 3s4-1 5-3c1-2 1-4 0-6-1-2-3-3-5-3z' fill='%23C9A84C' fill-opacity='0.03'/%3E%3C/svg%3E");
-            opacity: 0.5;
-        }
-        
-        .local-content {
-            max-width: 1000px;
-            margin: 0 auto;
-            text-align: center;
-            position: relative;
-            z-index: 1;
-        }
-        
-        .local-text {
-            font-family: var(--font-corps);
-            font-size: 1.1rem;
-            line-height: 1.9;
-            color: rgba(245, 240, 232, 0.85);
-            max-width: 800px;
-            margin: 0 auto 3rem;
-        }
-        
-        .local-badges {
-            display: flex;
-            justify-content: center;
-            gap: 2rem;
-            flex-wrap: wrap;
-            margin-bottom: 3rem;
-        }
-        
-        .local-badge {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            gap: 1rem;
-            padding: 2rem;
-            background: var(--noir-card);
-            border: 1px solid var(--gris-bordure);
-            border-radius: 4px;
-            min-width: 200px;
-            transition: all 0.4s var(--transition-elegant);
-        }
-        
-        .local-badge:hover {
-            border-color: var(--or-champagne);
-            transform: translateY(-5px);
-        }
-        
-        .local-badge-icon {
-            font-size: 2.5rem;
-        }
-        
-        .local-badge-text {
-            font-family: var(--font-titres);
-            font-size: 1rem;
-            color: var(--blanc-creme);
-        }
-        
-        /* ═══════════════════════════════════════════════════════════════
-           HISTOIRE SECTION
-           ═══════════════════════════════════════════════════════════════ */
-        .histoire-section {
-            background: var(--noir-profond);
-        }
-        
-        .histoire-timeline {
-            max-width: 800px;
-            margin: 0 auto;
-            position: relative;
-        }
-        
-        .histoire-timeline::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 30px;
-            width: 2px;
-            height: 100%;
-            background: linear-gradient(180deg, var(--or-champagne), var(--or-brillant), var(--or-champagne));
-        }
-        
-        .histoire-item {
-            display: flex;
-            gap: 2rem;
-            margin-bottom: 3rem;
-            position: relative;
-            opacity: 0;
-            transform: translateX(-30px);
-            transition: all 0.6s var(--transition-elegant);
-        }
-        
-        .histoire-item.active {
-            opacity: 1;
-            transform: translateX(0);
-        }
-        
-        .histoire-item-marker {
-            width: 60px;
-            height: 60px;
-            background: var(--noir-card);
-            border: 2px solid var(--or-champagne);
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 1.3rem;
-            flex-shrink: 0;
-            z-index: 2;
-        }
-        
-        .histoire-item-content {
-            flex: 1;
-            padding: 1.5rem 2rem;
-            background: var(--noir-card);
-            border: 1px solid var(--gris-bordure);
-            border-radius: 4px;
-            transition: all 0.4s var(--transition-elegant);
-        }
-        
-        .histoire-item:hover .histoire-item-content {
-            border-color: var(--or-champagne);
-        }
-        
-        .histoire-item-date {
-            font-family: var(--font-sous-titres);
-            font-size: 0.9rem;
-            font-style: italic;
-            color: var(--or-champagne);
-            margin-bottom: 0.5rem;
-        }
-        
-        .histoire-item-title {
-            font-family: var(--font-titres);
-            font-size: 1.3rem;
-            color: var(--blanc-creme);
-            margin-bottom: 0.5rem;
-        }
-        
-        .histoire-item-desc {
-            font-family: var(--font-corps);
-            font-size: 0.95rem;
-            color: rgba(245, 240, 232, 0.7);
-            line-height: 1.7;
-        }
-        
-        /* ═══════════════════════════════════════════════════════════════
-           GALERIE SECTION
-           ═══════════════════════════════════════════════════════════════ */
-        .galerie-section {
-            background: var(--noir-pur);
-        }
-        
-        .galerie-grid {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            grid-auto-rows: 250px;
-            gap: 1rem;
-            max-width: 1200px;
-            margin: 0 auto;
-        }
-        
-        .galerie-item {
-            position: relative;
-            overflow: hidden;
-            border-radius: 4px;
-            cursor: pointer;
-        }
-        
-        .galerie-item:nth-child(1) { grid-row: span 2; }
-        .galerie-item:nth-child(4) { grid-row: span 2; }
-        .galerie-item:nth-child(5) { grid-column: span 2; }
-        
-        .galerie-item img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-            transition: transform 0.6s var(--transition-elegant);
-        }
-        
-        .galerie-item:hover img {
-            transform: scale(1.1);
-        }
-        
-        .galerie-overlay {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: rgba(201, 168, 76, 0.7);
-            display: flex;
-            align-items: flex-end;
-            justify-content: center;
-            padding: 1.5rem;
-            opacity: 0;
-            transition: opacity 0.4s ease;
-        }
-        
-        .galerie-item:hover .galerie-overlay {
-            opacity: 1;
-        }
-        
-        .galerie-text {
-            font-family: var(--font-titres);
-            font-size: 1.1rem;
-            color: var(--noir-pur);
-            text-align: center;
-            transform: translateY(20px);
-            transition: transform 0.4s var(--transition-elegant);
-        }
-        
-        .galerie-item:hover .galerie-text {
-            transform: translateY(0);
-        }
-        
-        /* ═══════════════════════════════════════════════════════════════
-           TÉMOIGNAGES SECTION
-           ═══════════════════════════════════════════════════════════════ */
-        .temoignages-section {
-            background: var(--noir-profond);
-        }
-        
-        .temoignages-slider {
-            max-width: 800px;
-            margin: 0 auto;
-            position: relative;
-        }
-        
-        .temoignades-container {
-            overflow: hidden;
-        }
-        
-        .temoignages-track {
-            display: flex;
-            transition: transform 0.5s var(--transition-elegant);
-        }
-        
-        .temoignage-card {
-            min-width: 100%;
-            padding: 3rem;
-            text-align: center;
-        }
-        
-        .temoignage-stars {
-            color: var(--or-champagne);
-            font-size: 1.2rem;
-            margin-bottom: 1.5rem;
-        }
-        
-        .temoignage-text {
-            font-family: var(--font-sous-titres);
-            font-size: 1.3rem;
-            font-style: italic;
-            color: var(--blanc-creme);
-            line-height: 1.8;
-            margin-bottom: 2rem;
-        }
-        
-        .temoignage-author {
-            font-family: var(--font-corps);
-            font-size: 0.95rem;
-            color: var(--or-champagne);
-        }
-        
-        .temoignage-location {
-            font-family: var(--font-corps);
-            font-size: 0.85rem;
-            color: rgba(245, 240, 232, 0.6);
-        }
-        
-        .temoignages-dots {
-            display: flex;
-            justify-content: center;
-            gap: 1rem;
-            margin-top: 2rem;
-        }
-        
-        .temoignage-dot {
-            width: 12px;
-            height: 12px;
-            border-radius: 50%;
-            background: var(--gris-bordure);
-            cursor: pointer;
-            transition: all 0.3s ease;
-        }
-        
-        .temoignage-dot.active {
-            background: var(--or-champagne);
-            transform: scale(1.2);
-        }
-        
-        /* ═══════════════════════════════════════════════════════════════
-           FORMULAIRE SECTION
-           ═══════════════════════════════════════════════════════════════ */
+        /* FORMULAIRE SECTION */
         .formulaire-section {
             background: linear-gradient(180deg, var(--noir-pur) 0%, var(--noir-profond) 100%);
         }
@@ -1597,12 +1082,7 @@
             left: -100%;
             width: 100%;
             height: 100%;
-            background: linear-gradient(
-                90deg,
-                transparent,
-                rgba(255, 255, 255, 0.4),
-                transparent
-            );
+            background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.4), transparent);
             transition: left 0.6s ease;
         }
         
@@ -1621,7 +1101,6 @@
             animation: none;
         }
         
-        /* Contact Sidebar */
         .contact-sidebar {
             display: flex;
             flex-direction: column;
@@ -1713,7 +1192,6 @@
             color: rgba(245, 240, 232, 0.6);
         }
         
-        /* Success Message */
         .form-success {
             display: none;
             text-align: center;
@@ -1776,7 +1254,6 @@
             line-height: 1.7;
         }
         
-        /* Confetti */
         .confetti-container {
             position: fixed;
             top: 0;
@@ -1807,9 +1284,413 @@
             }
         }
         
-        /* ═══════════════════════════════════════════════════════════════
-           FOOTER
-           ═══════════════════════════════════════════════════════════════ */
+        /* LOCAL SECTION */
+        .local-section {
+            background: var(--noir-pur);
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .local-section::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-image: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M30 5c-2 0-4 1-5 3-1 2-1 4 0 6 1 2 3 3 5 3s4-1 5-3c1-2 1-4 0-6-1-2-3-3-5-3z' fill='%23C9A84C' fill-opacity='0.03'/%3E%3C/svg%3E");
+            opacity: 0.5;
+        }
+        
+        .local-content {
+            max-width: 1000px;
+            margin: 0 auto;
+            text-align: center;
+            position: relative;
+            z-index: 1;
+        }
+        
+        .local-text {
+            font-family: var(--font-corps);
+            font-size: 1.1rem;
+            line-height: 1.9;
+            color: rgba(245, 240, 232, 0.85);
+            max-width: 800px;
+            margin: 0 auto 3rem;
+        }
+        
+        .local-badges {
+            display: flex;
+            justify-content: center;
+            gap: 2rem;
+            flex-wrap: wrap;
+            margin-bottom: 3rem;
+        }
+        
+        .local-badge {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 1rem;
+            padding: 2rem;
+            background: var(--noir-card);
+            border: 1px solid var(--gris-bordure);
+            border-radius: 4px;
+            min-width: 200px;
+            transition: all 0.4s var(--transition-elegant);
+        }
+        
+        .local-badge:hover {
+            border-color: var(--or-champagne);
+            transform: translateY(-5px);
+        }
+        
+        .local-badge-icon {
+            font-size: 2.5rem;
+        }
+        
+        .local-badge-text {
+            font-family: var(--font-titres);
+            font-size: 1rem;
+            color: var(--blanc-creme);
+        }
+        
+        /* HISTOIRE SECTION */
+        .histoire-section {
+            background: var(--noir-profond);
+        }
+        
+        .histoire-timeline {
+            max-width: 800px;
+            margin: 0 auto;
+            position: relative;
+        }
+        
+        .histoire-timeline::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 30px;
+            width: 2px;
+            height: 100%;
+            background: linear-gradient(180deg, var(--or-champagne), var(--or-brillant), var(--or-champagne));
+        }
+        
+        .histoire-item {
+            display: flex;
+            gap: 2rem;
+            margin-bottom: 3rem;
+            position: relative;
+            opacity: 0;
+            transform: translateX(-30px);
+            transition: all 0.6s var(--transition-elegant);
+        }
+        
+        .histoire-item.active {
+            opacity: 1;
+            transform: translateX(0);
+        }
+        
+        .histoire-item-marker {
+            width: 60px;
+            height: 60px;
+            background: var(--noir-card);
+            border: 2px solid var(--or-champagne);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.3rem;
+            flex-shrink: 0;
+            z-index: 2;
+        }
+        
+        .histoire-item-content {
+            flex: 1;
+            padding: 1.5rem 2rem;
+            background: var(--noir-card);
+            border: 1px solid var(--gris-bordure);
+            border-radius: 4px;
+            transition: all 0.4s var(--transition-elegant);
+        }
+        
+        .histoire-item:hover .histoire-item-content {
+            border-color: var(--or-champagne);
+        }
+        
+        .histoire-item-date {
+            font-family: var(--font-sous-titres);
+            font-size: 0.9rem;
+            font-style: italic;
+            color: var(--or-champagne);
+            margin-bottom: 0.5rem;
+        }
+        
+        .histoire-item-title {
+            font-family: var(--font-titres);
+            font-size: 1.3rem;
+            color: var(--blanc-creme);
+            margin-bottom: 0.5rem;
+        }
+        
+        .histoire-item-desc {
+            font-family: var(--font-corps);
+            font-size: 0.95rem;
+            color: rgba(245, 240, 232, 0.7);
+            line-height: 1.7;
+        }
+        
+        /* GALERIE SECTION */
+        .galerie-section {
+            background: var(--noir-pur);
+        }
+        
+        .galerie-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            grid-auto-rows: 250px;
+            gap: 1rem;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        
+        .galerie-item {
+            position: relative;
+            overflow: hidden;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+        
+        .galerie-item:nth-child(1) { grid-row: span 2; }
+        .galerie-item:nth-child(4) { grid-row: span 2; }
+        .galerie-item:nth-child(5) { grid-column: span 2; }
+        
+        .galerie-item img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.6s var(--transition-elegant);
+        }
+        
+        .galerie-item:hover img {
+            transform: scale(1.1);
+        }
+        
+        .galerie-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(201, 168, 76, 0.7);
+            display: flex;
+            align-items: flex-end;
+            justify-content: center;
+            padding: 1.5rem;
+            opacity: 0;
+            transition: opacity 0.4s ease;
+        }
+        
+        .galerie-item:hover .galerie-overlay {
+            opacity: 1;
+        }
+        
+        .galerie-text {
+            font-family: var(--font-titres);
+            font-size: 1.1rem;
+            color: var(--noir-pur);
+            text-align: center;
+            transform: translateY(20px);
+            transition: transform 0.4s var(--transition-elegant);
+        }
+        
+        .galerie-item:hover .galerie-text {
+            transform: translateY(0);
+        }
+        
+        /* PRESTATIONS SECTION */
+        .prestations-section {
+            background: linear-gradient(180deg, var(--noir-profond) 0%, var(--noir-pur) 100%);
+        }
+        
+        .prestations-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 2rem;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        
+        .prestation-card {
+            background: var(--noir-card);
+            border: 1px solid var(--gris-bordure);
+            border-radius: 4px;
+            overflow: hidden;
+            transition: all 0.4s var(--transition-elegant);
+            position: relative;
+        }
+        
+        .prestation-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 3px;
+            background: linear-gradient(90deg, transparent, var(--or-champagne), transparent);
+            transform: scaleX(0);
+            transition: transform 0.4s var(--transition-elegant);
+        }
+        
+        .prestation-card:hover {
+            border-color: var(--or-champagne);
+            transform: translateY(-10px);
+            box-shadow: 0 20px 40px rgba(201, 168, 76, 0.15);
+        }
+        
+        .prestation-card:hover::before {
+            transform: scaleX(1);
+        }
+        
+        .prestation-image {
+            width: 100%;
+            height: 250px;
+            overflow: hidden;
+        }
+        
+        .prestation-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.6s var(--transition-elegant);
+        }
+        
+        .prestation-card:hover .prestation-image img {
+            transform: scale(1.1);
+        }
+        
+        .prestation-content {
+            padding: 1.5rem;
+        }
+        
+        .prestation-title {
+            font-family: var(--font-titres);
+            font-size: 1.4rem;
+            color: var(--blanc-creme);
+            margin-bottom: 0.5rem;
+        }
+        
+        .prestation-desc {
+            font-family: var(--font-corps);
+            font-size: 0.9rem;
+            color: rgba(245, 240, 232, 0.7);
+            line-height: 1.6;
+        }
+        
+        /* TÉMOIGNAGES SECTION */
+        .temoignages-section {
+            background: var(--noir-profond);
+        }
+        
+        .temoignages-slider {
+            max-width: 800px;
+            margin: 0 auto;
+            position: relative;
+        }
+        
+        .temoignades-container {
+            overflow: hidden;
+        }
+        
+        .temoignages-track {
+            display: flex;
+            transition: transform 0.5s var(--transition-elegant);
+        }
+        
+        .temoignage-card {
+            min-width: 100%;
+            padding: 3rem;
+            text-align: center;
+        }
+        
+        .temoignage-stars {
+            color: var(--or-champagne);
+            font-size: 1.2rem;
+            margin-bottom: 1.5rem;
+        }
+        
+        .temoignage-text {
+            font-family: var(--font-sous-titres);
+            font-size: 1.3rem;
+            font-style: italic;
+            color: var(--blanc-creme);
+            line-height: 1.8;
+            margin-bottom: 2rem;
+        }
+        
+        .temoignage-author {
+            font-family: var(--font-corps);
+            font-size: 0.95rem;
+            color: var(--or-champagne);
+        }
+        
+        .temoignage-location {
+            font-family: var(--font-corps);
+            font-size: 0.85rem;
+            color: rgba(245, 240, 232, 0.6);
+        }
+        
+        .temoignages-dots {
+            display: flex;
+            justify-content: center;
+            gap: 1rem;
+            margin-top: 2rem;
+        }
+        
+        .temoignage-dot {
+            width: 12px;
+            height: 12px;
+            border-radius: 50%;
+            background: var(--gris-bordure);
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+        
+        .temoignage-dot.active {
+            background: var(--or-champagne);
+            transform: scale(1.2);
+        }
+        
+        /* GOOGLE MAPS SECTION */
+        .maps-section {
+            background: var(--noir-pur);
+            padding: 0;
+        }
+        
+        .maps-container {
+            width: 100%;
+            height: 400px;
+            position: relative;
+        }
+        
+        .maps-container iframe {
+            width: 100%;
+            height: 100%;
+            border: none;
+            filter: grayscale(100%) invert(92%) contrast(83%);
+        }
+        
+        .maps-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(10, 10, 10, 0.3);
+            pointer-events: none;
+        }
+        
+        /* FOOTER */
         .footer {
             background: var(--noir-pur);
             padding: 4rem 2rem 2rem;
@@ -1956,9 +1837,7 @@
             color: var(--or-champagne);
         }
         
-        /* ═══════════════════════════════════════════════════════════════
-           RESPONSIVE
-           ═══════════════════════════════════════════════════════════════ */
+        /* RESPONSIVE */
         @media (max-width: 1024px) {
             .navbar {
                 padding: 1rem 2rem;
@@ -2001,6 +1880,10 @@
             
             .galerie-item:nth-child(5) {
                 grid-column: span 1;
+            }
+            
+            .prestations-grid {
+                grid-template-columns: repeat(2, 1fr);
             }
         }
         
@@ -2106,6 +1989,10 @@
             section {
                 padding: 4rem 1.5rem;
             }
+            
+            .maps-container {
+                height: 300px;
+            }
         }
         
         @media (max-width: 480px) {
@@ -2132,31 +2019,27 @@
             .temoignage-text {
                 font-size: 1.1rem;
             }
+            
+            .logo img {
+                height: 45px;
+            }
         }
     </style>
 </head>
 <body>
-    <!-- Curseur personnalisé -->
-    <div class="cursor"></div>
-    <div class="cursor-dot"></div>
-    <div class="cursor-trail"></div>
-    
-    <!-- ═══════════════════════════════════════════════════════════════
-         NAVBAR
-         ═══════════════════════════════════════════════════════════════ -->
+    <!-- NAVBAR -->
     <nav class="navbar">
         <a href="#" class="logo">
-            <span class="logo-monogram">OB</span>
-            <span class="logo-text">Olivier Bergeron</span>
-            <span class="logo-sub">Chef Privé</span>
+            <img src="images/logo.png" alt="Olivier Bergeron - Chef à Domicile">
         </a>
         
         <ul class="nav-links">
             <li><a href="#accueil">Accueil</a></li>
             <li><a href="#experience">L'Expérience</a></li>
-            <li><a href="#prestations">Prestations</a></li>
-            <li><a href="#histoire">Ma Story</a></li>
-            <li><a href="#galerie">Galerie</a></li>
+            <li><a href="#prestations">Mes Prestations</a></li>
+            <li><a href="#contact">Devis</a></li>
+            <li><a href="#histoire">Mon Histoire</a></li>
+            <li><a href="tel:+33764544907" class="nav-phone"><i class="fas fa-phone"></i> 07 64 54 49 07</a></li>
             <li><a href="#contact" class="nav-cta">Réserver</a></li>
         </ul>
         
@@ -2172,31 +2055,29 @@
     <div class="mobile-menu">
         <a href="#accueil">Accueil</a>
         <a href="#experience">L'Expérience</a>
-        <a href="#prestations">Prestations</a>
-        <a href="#histoire">Ma Story</a>
-        <a href="#galerie">Galerie</a>
+        <a href="#prestations">Mes Prestations</a>
+        <a href="#contact">Devis</a>
+        <a href="#histoire">Mon Histoire</a>
+        <a href="tel:+33764544907" style="color: var(--or-champagne);"><i class="fas fa-phone"></i> 07 64 54 49 07</a>
         <a href="#contact" style="color: var(--or-champagne);">Réserver</a>
     </div>
     
-    <!-- ═══════════════════════════════════════════════════════════════
-         HERO SECTION
-         ═══════════════════════════════════════════════════════════════ -->
+    <!-- HERO SECTION -->
     <section id="accueil" class="hero">
         <div class="hero-bg"></div>
         <div class="hero-overlay"></div>
         
-        <!-- Particules dorées -->
         <div class="particles-container" id="particles"></div>
         
         <div class="hero-content">
             <div class="hero-badge">
                 <i class="fas fa-star"></i>
-                Vaucluse • Provence • France & International
+                Chef Privé à Domicile
                 <i class="fas fa-star"></i>
             </div>
             
             <h1 class="hero-title">
-                <span class="hero-title-line"><span>L'Art Culinaire Prémium</span></span>
+                <span class="hero-title-line"><span>L'Art Culinaire</span></span>
                 <span class="hero-title-line"><span>À Votre Table</span></span>
             </h1>
             
@@ -2221,6 +2102,10 @@
                     <i class="fas fa-arrow-down"></i>
                 </a>
             </div>
+            
+            <p class="hero-location">
+                <i class="fas fa-map-marker-alt"></i> Vaucluse, Provence, France & International
+            </p>
         </div>
         
         <div class="scroll-indicator">
@@ -2228,9 +2113,7 @@
         </div>
     </section>
     
-    <!-- ═══════════════════════════════════════════════════════════════
-         STATS SECTION
-         ═══════════════════════════════════════════════════════════════ -->
+    <!-- STATS SECTION -->
     <section class="stats-section">
         <div class="stats-grid">
             <div class="stat-item" data-count="200" data-suffix="+">
@@ -2249,25 +2132,14 @@
                 <div class="stat-label">Produits locaux Vaucluse</div>
             </div>
             <div class="stat-item" data-count="15" data-suffix="+">
-                <div class="stat-icon"><i class="fas fa-user-chef"></i></div>
+                <div class="stat-icon"><i class="fas fa-hat-chef"></i></div>
                 <div class="stat-number">0</div>
                 <div class="stat-label">Ans d'expérience</div>
             </div>
         </div>
     </section>
     
-    <!-- Séparateur décoratif -->
-    <div class="section-divider">
-        <svg viewBox="0 0 300 60">
-            <line x1="0" y1="30" x2="120" y2="30"/>
-            <circle cx="150" cy="30" r="4"/>
-            <line x1="180" y1="30" x2="300" y2="30"/>
-        </svg>
-    </div>
-    
-    <!-- ═══════════════════════════════════════════════════════════════
-         EXPERIENCE SECTION
-         ═══════════════════════════════════════════════════════════════ -->
+    <!-- EXPERIENCE SECTION -->
     <section id="experience" class="experience-section">
         <div class="experience-content">
             <div class="section-header reveal">
@@ -2289,11 +2161,10 @@
                 </div>
                 
                 <div class="experience-image reveal reveal-delay-2">
-                    <img src="https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?w=800&q=80" alt="Chef Olivier Bergeron en cuisine" loading="lazy">
+                    <img src="images/presta-01.jpg" alt="Chef Olivier Bergeron en cuisine" loading="lazy">
                 </div>
             </div>
             
-            <!-- Timeline -->
             <div class="timeline reveal reveal-delay-3">
                 <div class="timeline-line"></div>
                 <div class="timeline-steps">
@@ -2342,7 +2213,6 @@
         </div>
     </section>
     
-    <!-- Séparateur décoratif -->
     <div class="section-divider">
         <svg viewBox="0 0 300 60">
             <line x1="0" y1="30" x2="120" y2="30"/>
@@ -2351,278 +2221,7 @@
         </svg>
     </div>
     
-    <!-- ═══════════════════════════════════════════════════════════════
-         PRESTATIONS SECTION
-         ═══════════════════════════════════════════════════════════════ -->
-    <section id="prestations" class="prestations-section">
-        <div class="section-header reveal">
-            <h2 class="section-title">Des Prestations <span class="section-title-gold">Sur Mesure</span></h2>
-            <p class="section-subtitle">Chaque événement mérite une attention particulière</p>
-        </div>
-        
-        <div class="prestations-grid">
-            <div class="prestation-card reveal reveal-delay-1">
-                <div class="prestation-icon">🏠</div>
-                <h3 class="prestation-title">Dîner Privé à Domicile</h3>
-                <p class="prestation-desc">Menu entièrement personnalisé, service complet en table, nettoyage inclus. L'expérience restaurant étoilé chez vous.</p>
-                <a href="#contact" class="prestation-link">En savoir plus <i class="fas fa-arrow-right"></i></a>
-            </div>
-            
-            <div class="prestation-card reveal reveal-delay-2">
-                <div class="prestation-icon">🎉</div>
-                <h3 class="prestation-title">Événements & Réceptions</h3>
-                <p class="prestation-desc">Anniversaires, mariages, soirées d'entreprise. De 10 à 100 convives, chaque détail est pensé pour vous.</p>
-                <a href="#contact" class="prestation-link">En savoir plus <i class="fas fa-arrow-right"></i></a>
-            </div>
-            
-            <div class="prestation-card reveal reveal-delay-3">
-                <div class="prestation-icon">👨‍👩‍👧‍👦</div>
-                <h3 class="prestation-title">Repas en Famille</h3>
-                <p class="prestation-desc">Cuisine familiale gastronomique avec des produits locaux bio. Des moments de partage autour d'une table exceptionnelle.</p>
-                <a href="#contact" class="prestation-link">En savoir plus <i class="fas fa-arrow-right"></i></a>
-            </div>
-            
-            <div class="prestation-card reveal reveal-delay-4">
-                <div class="prestation-icon">🌿</div>
-                <h3 class="prestation-title">Menu Végétarien/Vegan</h3>
-                <p class="prestation-desc">100% produits de saison des maraîchers du Vaucluse. Une cuisine végétale créative et gourmande.</p>
-                <a href="#contact" class="prestation-link">En savoir plus <i class="fas fa-arrow-right"></i></a>
-            </div>
-            
-            <div class="prestation-card reveal reveal-delay-5">
-                <div class="prestation-icon">🍾</div>
-                <h3 class="prestation-title">Soirée Dégustation</h3>
-                <p class="prestation-desc">Accord mets & vins, expérience œnologique complète. Découvrez les meilleurs vins de Provence sublimés par ma cuisine.</p>
-                <a href="#contact" class="prestation-link">En savoir plus <i class="fas fa-arrow-right"></i></a>
-            </div>
-            
-            <div class="prestation-card reveal reveal-delay-1">
-                <div class="prestation-icon">✈️</div>
-                <h3 class="prestation-title">Déplacement National & International</h3>
-                <p class="prestation-desc">Chef privé en déplacement, partout en France et à l'étranger. Je me déplace pour créer votre expérience gastronomique.</p>
-                <a href="#contact" class="prestation-link">En savoir plus <i class="fas fa-arrow-right"></i></a>
-            </div>
-        </div>
-    </section>
-    
-    <!-- ═══════════════════════════════════════════════════════════════
-         LOCAL SECTION
-         ═══════════════════════════════════════════════════════════════ -->
-    <section class="local-section">
-        <div class="local-content">
-            <div class="section-header reveal">
-                <h2 class="section-title"><span class="section-title-gold">L'Économie Locale</span> au Cœur de ma Démarche</h2>
-            </div>
-            
-            <p class="local-text reveal reveal-delay-1">
-                Le but est de <strong>soutenir l'économie locale</strong> en vous proposant des aliments régionaux ultra frais, cueillis le matin même chez les producteurs de <strong>Pernes-les-Fontaines</strong> et des environs. Une cuisine responsable, respectueuse des saisons et des hommes qui la font vivre.
-            </p>
-            
-            <div class="local-badges">
-                <div class="local-badge reveal reveal-delay-2">
-                    <span class="local-badge-icon">🫒</span>
-                    <span class="local-badge-text">Maraîchers de Pernes-les-Fontaines</span>
-                </div>
-                <div class="local-badge reveal reveal-delay-3">
-                    <span class="local-badge-icon">🥚</span>
-                    <span class="local-badge-text">Œufs frais producteurs locaux</span>
-                </div>
-                <div class="local-badge reveal reveal-delay-4">
-                    <span class="local-badge-icon">🧀</span>
-                    <span class="local-badge-text">Fromages de chèvre artisanaux</span>
-                </div>
-            </div>
-        </div>
-    </section>
-    
-    <!-- Séparateur décoratif -->
-    <div class="section-divider">
-        <svg viewBox="0 0 300 60">
-            <line x1="0" y1="30" x2="120" y2="30"/>
-            <circle cx="150" cy="30" r="4"/>
-            <line x1="180" y1="30" x2="300" y2="30"/>
-        </svg>
-    </div>
-    
-    <!-- ═══════════════════════════════════════════════════════════════
-         HISTOIRE SECTION
-         ═══════════════════════════════════════════════════════════════ -->
-    <section id="histoire" class="histoire-section">
-        <div class="section-header reveal">
-            <h2 class="section-title">Le Parcours d'un <span class="section-title-gold">Passionné</span></h2>
-            <p class="section-subtitle">De l'école hôtelière à votre table</p>
-        </div>
-        
-        <div class="histoire-timeline">
-            <div class="histoire-item reveal">
-                <div class="histoire-item-marker">📚</div>
-                <div class="histoire-item-content">
-                    <div class="histoire-item-date">Formation</div>
-                    <h4 class="histoire-item-title">École hôtelière d'Avignon</h4>
-                    <p class="histoire-item-desc">Formation CAP cuisine, formé par <strong>Frédéric Toppin</strong>, disciple d'Escoffier. Les bases d'une cuisine d'excellence.</p>
-                </div>
-            </div>
-            
-            <div class="histoire-item reveal reveal-delay-1">
-                <div class="histoire-item-marker">🍳</div>
-                <div class="histoire-item-content">
-                    <div class="histoire-item-date">Expérience diversifiée</div>
-                    <h4 class="histoire-item-title">Tous secteurs de la restauration</h4>
-                    <p class="histoire-item-desc">Traiteur, brasserie, pizzeria, semi-gastronomique, barman, serveur — une polyvalence précieuse qui fait de moi un chef complet.</p>
-                </div>
-            </div>
-            
-            <div class="histoire-item reveal reveal-delay-2">
-                <div class="histoire-item-marker">🚚</div>
-                <div class="histoire-item-content">
-                    <div class="histoire-item-date">23 ans</div>
-                    <h4 class="histoire-item-title">Food Truck "Le P'tit Olive"</h4>
-                    <p class="histoire-item-desc">Ma première entreprise : cuisine fusion américaine-provençale. L'aventure entrepreneuriale commence avec passion et créativité.</p>
-                </div>
-            </div>
-            
-            <div class="histoire-item reveal reveal-delay-3">
-                <div class="histoire-item-marker">🌍</div>
-                <div class="histoire-item-content">
-                    <div class="histoire-item-date">Montréal, Québec</div>
-                    <h4 class="histoire-item-title">Gestion & Expansion</h4>
-                    <p class="histoire-item-desc">Gestion d'un restaurant et trois food trucks pendant 2 ans. Une expérience internationale qui a forgé mon sens du management.</p>
-                </div>
-            </div>
-            
-            <div class="histoire-item reveal reveal-delay-4">
-                <div class="histoire-item-marker">⭐</div>
-                <div class="histoire-item-content">
-                    <div class="histoire-item-date">Aujourd'hui</div>
-                    <h4 class="histoire-item-title">Chef Privé en Provence</h4>
-                    <p class="histoire-item-desc">Chef à domicile sur mesure, en Vaucluse et partout en France. Mon rêve : vous offrir l'excellence gastronomique chez vous.</p>
-                </div>
-            </div>
-        </div>
-    </section>
-    
-    <!-- ═══════════════════════════════════════════════════════════════
-         GALERIE SECTION
-         ═══════════════════════════════════════════════════════════════ -->
-    <section id="galerie" class="galerie-section">
-        <div class="section-header reveal">
-            <h2 class="section-title">Mes <span class="section-title-gold">Créations</span></h2>
-            <p class="section-subtitle">Un aperçu de mon univers culinaire</p>
-        </div>
-        
-        <div class="galerie-grid">
-            <div class="galerie-item reveal">
-                <img src="https://images.unsplash.com/photo-1504674900247-0877df9cc836?w=800&q=80" alt="Plat gastronomique" loading="lazy">
-                <div class="galerie-overlay">
-                    <p class="galerie-text">Prestation Olivier Bergeron</p>
-                </div>
-            </div>
-            <div class="galerie-item reveal reveal-delay-1">
-                <img src="https://images.unsplash.com/photo-1540189549336-e6e99c3679fe?w=800&q=80" alt="Salade fraîche" loading="lazy">
-                <div class="galerie-overlay">
-                    <p class="galerie-text">Produits locaux du Vaucluse</p>
-                </div>
-            </div>
-            <div class="galerie-item reveal reveal-delay-2">
-                <img src="https://images.unsplash.com/photo-1565299624946-b28f40a0ae38?w=800&q=80" alt="Pizza artisanale" loading="lazy">
-                <div class="galerie-overlay">
-                    <p class="galerie-text">Cuisine authentique</p>
-                </div>
-            </div>
-            <div class="galerie-item reveal reveal-delay-3">
-                <img src="https://images.unsplash.com/photo-1467003909585-2f8a72700288?w=800&q=80" alt="Saumon gastronomique" loading="lazy">
-                <div class="galerie-overlay">
-                    <p class="galerie-text">Saveurs de Provence</p>
-                </div>
-            </div>
-            <div class="galerie-item reveal reveal-delay-4">
-                <img src="https://images.unsplash.com/photo-1555396273-367ea4eb4db5?w=800&q=80" alt="Restaurant élégant" loading="lazy">
-                <div class="galerie-overlay">
-                    <p class="galerie-text">Service haut de gamme</p>
-                </div>
-            </div>
-            <div class="galerie-item reveal reveal-delay-5">
-                <img src="https://images.unsplash.com/photo-1414235077428-338989a2e8c0?w=800&q=80" alt="Cuisine professionnelle" loading="lazy">
-                <div class="galerie-overlay">
-                    <p class="galerie-text">L'Art Culinaire</p>
-                </div>
-            </div>
-        </div>
-    </section>
-    
-    <!-- ═══════════════════════════════════════════════════════════════
-         TÉMOIGNAGES SECTION
-         ═══════════════════════════════════════════════════════════════ -->
-    <section class="temoignages-section">
-        <div class="section-header reveal">
-            <h2 class="section-title">Ils ont vécu <span class="section-title-gold">l'expérience</span></h2>
-            <p class="section-subtitle">Ce que mes clients disent de moi</p>
-        </div>
-        
-        <div class="temoignages-slider reveal reveal-delay-1">
-            <div class="temoignades-container">
-                <div class="temoignages-track" id="temoignagesTrack">
-                    <div class="temoignage-card">
-                        <div class="temoignage-stars">
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                        </div>
-                        <p class="temoignage-text">"Une soirée inoubliable. Olivier est arrivé, a tout géré, et nous avons juste profité d'un repas digne d'un grand restaurant. Merci infiniment."</p>
-                        <p class="temoignage-author">Marie & Pierre L.</p>
-                        <p class="temoignage-location">Avignon</p>
-                    </div>
-                    
-                    <div class="temoignage-card">
-                        <div class="temoignage-stars">
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                        </div>
-                        <p class="temoignage-text">"Professionnalisme exemplaire. Les produits étaient d'une fraîcheur exceptionnelle. On a redécouvert les saveurs de Provence."</p>
-                        <p class="temoignage-author">Famille Dubois</p>
-                        <p class="temoignage-location">Carpentras</p>
-                    </div>
-                    
-                    <div class="temoignage-card">
-                        <div class="temoignage-stars">
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                        </div>
-                        <p class="temoignage-text">"Parfait pour notre anniversaire de mariage. Olivier a su créer une atmosphère magique avec une cuisine somptueuse."</p>
-                        <p class="temoignage-author">Thomas & Camille</p>
-                        <p class="temoignage-location">L'Isle-sur-la-Sorgue</p>
-                    </div>
-                </div>
-            </div>
-            
-            <div class="temoignages-dots">
-                <div class="temoignage-dot active" data-index="0"></div>
-                <div class="temoignage-dot" data-index="1"></div>
-                <div class="temoignage-dot" data-index="2"></div>
-            </div>
-        </div>
-    </section>
-    
-    <!-- Séparateur décoratif -->
-    <div class="section-divider">
-        <svg viewBox="0 0 300 60">
-            <line x1="0" y1="30" x2="120" y2="30"/>
-            <circle cx="150" cy="30" r="4"/>
-            <line x1="180" y1="30" x2="300" y2="30"/>
-        </svg>
-    </div>
-    
-    <!-- ═══════════════════════════════════════════════════════════════
-         FORMULAIRE SECTION
-         ═══════════════════════════════════════════════════════════════ -->
+    <!-- FORMULAIRE SECTION -->
     <section id="contact" class="formulaire-section">
         <div class="section-header reveal">
             <h2 class="section-title">Demandez votre <span class="section-title-gold">Devis Personnalisé</span></h2>
@@ -2764,9 +2363,319 @@
         </div>
     </section>
     
-    <!-- ═══════════════════════════════════════════════════════════════
-         FOOTER
-         ═══════════════════════════════════════════════════════════════ -->
+    <div class="section-divider">
+        <svg viewBox="0 0 300 60">
+            <line x1="0" y1="30" x2="120" y2="30"/>
+            <circle cx="150" cy="30" r="4"/>
+            <line x1="180" y1="30" x2="300" y2="30"/>
+        </svg>
+    </div>
+    
+    <!-- LOCAL SECTION -->
+    <section class="local-section">
+        <div class="local-content">
+            <div class="section-header reveal">
+                <h2 class="section-title"><span class="section-title-gold">L'Économie Locale</span> au Cœur de ma Démarche</h2>
+            </div>
+            
+            <p class="local-text reveal reveal-delay-1">
+                Le but est de <strong>soutenir l'économie locale</strong> en vous proposant des aliments régionaux ultra frais, cueillis le matin même chez les producteurs de <strong>Pernes-les-Fontaines</strong> et des environs. Une cuisine responsable, respectueuse des saisons et des hommes qui la font vivre.
+            </p>
+            
+            <div class="local-badges">
+                <div class="local-badge reveal reveal-delay-2">
+                    <span class="local-badge-icon">🫒</span>
+                    <span class="local-badge-text">Maraîchers de Pernes-les-Fontaines</span>
+                </div>
+                <div class="local-badge reveal reveal-delay-3">
+                    <span class="local-badge-icon">🥚</span>
+                    <span class="local-badge-text">Œufs frais producteurs locaux</span>
+                </div>
+                <div class="local-badge reveal reveal-delay-4">
+                    <span class="local-badge-icon">🧀</span>
+                    <span class="local-badge-text">Fromages de chèvre artisanaux</span>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <div class="section-divider">
+        <svg viewBox="0 0 300 60">
+            <line x1="0" y1="30" x2="120" y2="30"/>
+            <circle cx="150" cy="30" r="4"/>
+            <line x1="180" y1="30" x2="300" y2="30"/>
+        </svg>
+    </div>
+    
+    <!-- HISTOIRE SECTION -->
+    <section id="histoire" class="histoire-section">
+        <div class="section-header reveal">
+            <h2 class="section-title">Le Parcours d'un <span class="section-title-gold">Passionné</span></h2>
+            <p class="section-subtitle">De l'école hôtelière à votre table</p>
+        </div>
+        
+        <div class="histoire-timeline">
+            <div class="histoire-item reveal">
+                <div class="histoire-item-marker">📚</div>
+                <div class="histoire-item-content">
+                    <div class="histoire-item-date">Formation</div>
+                    <h4 class="histoire-item-title">École hôtelière d'Avignon</h4>
+                    <p class="histoire-item-desc">Formation CAP cuisine, formé par <strong>Frédéric Toppin</strong>, disciple d'Escoffier. Les bases d'une cuisine d'excellence.</p>
+                </div>
+            </div>
+            
+            <div class="histoire-item reveal reveal-delay-1">
+                <div class="histoire-item-marker">🍳</div>
+                <div class="histoire-item-content">
+                    <div class="histoire-item-date">Expérience diversifiée</div>
+                    <h4 class="histoire-item-title">Tous secteurs de la restauration</h4>
+                    <p class="histoire-item-desc">Traiteur, brasserie, pizzeria, semi-gastronomique, barman, serveur — une polyvalence précieuse qui fait de moi un chef complet.</p>
+                </div>
+            </div>
+            
+            <div class="histoire-item reveal reveal-delay-2">
+                <div class="histoire-item-marker">🚚</div>
+                <div class="histoire-item-content">
+                    <div class="histoire-item-date">23 ans</div>
+                    <h4 class="histoire-item-title">Food Truck "Le P'tit Olive"</h4>
+                    <p class="histoire-item-desc">Ma première entreprise : cuisine fusion américaine-provençale. L'aventure entrepreneuriale commence avec passion et créativité.</p>
+                </div>
+            </div>
+            
+            <div class="histoire-item reveal reveal-delay-3">
+                <div class="histoire-item-marker">🌍</div>
+                <div class="histoire-item-content">
+                    <div class="histoire-item-date">Montréal, Québec</div>
+                    <h4 class="histoire-item-title">Gestion & Expansion</h4>
+                    <p class="histoire-item-desc">Gestion d'un restaurant et trois food trucks pendant 2 ans. Une expérience internationale qui a forgé mon sens du management.</p>
+                </div>
+            </div>
+            
+            <div class="histoire-item reveal reveal-delay-4">
+                <div class="histoire-item-marker">⭐</div>
+                <div class="histoire-item-content">
+                    <div class="histoire-item-date">Aujourd'hui</div>
+                    <h4 class="histoire-item-title">Chef Privé en Provence</h4>
+                    <p class="histoire-item-desc">Chef à domicile sur mesure, en Vaucluse et partout en France. Mon rêve : vous offrir l'excellence gastronomique chez vous.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <div class="section-divider">
+        <svg viewBox="0 0 300 60">
+            <line x1="0" y1="30" x2="120" y2="30"/>
+            <circle cx="150" cy="30" r="4"/>
+            <line x1="180" y1="30" x2="300" y2="30"/>
+        </svg>
+    </div>
+    
+    <!-- GALERIE SECTION -->
+    <section id="galerie" class="galerie-section">
+        <div class="section-header reveal">
+            <h2 class="section-title">Mes <span class="section-title-gold">Créations</span></h2>
+            <p class="section-subtitle">Un aperçu de mon univers culinaire</p>
+        </div>
+        
+        <div class="galerie-grid">
+            <div class="galerie-item reveal">
+                <img src="images/gallery-01.jpg" alt="Création culinaire" loading="lazy">
+                <div class="galerie-overlay">
+                    <p class="galerie-text">Prestation Olivier Bergeron</p>
+                </div>
+            </div>
+            <div class="galerie-item reveal reveal-delay-1">
+                <img src="images/gallery-02.jpg" alt="Création culinaire" loading="lazy">
+                <div class="galerie-overlay">
+                    <p class="galerie-text">Produits locaux du Vaucluse</p>
+                </div>
+            </div>
+            <div class="galerie-item reveal reveal-delay-2">
+                <img src="images/gallery-03.jpg" alt="Création culinaire" loading="lazy">
+                <div class="galerie-overlay">
+                    <p class="galerie-text">Cuisine authentique</p>
+                </div>
+            </div>
+            <div class="galerie-item reveal reveal-delay-3">
+                <img src="images/gallery-04.jpg" alt="Création culinaire" loading="lazy">
+                <div class="galerie-overlay">
+                    <p class="galerie-text">Saveurs de Provence</p>
+                </div>
+            </div>
+            <div class="galerie-item reveal reveal-delay-4">
+                <img src="images/gallery-05.jpg" alt="Création culinaire" loading="lazy">
+                <div class="galerie-overlay">
+                    <p class="galerie-text">Service haut de gamme</p>
+                </div>
+            </div>
+            <div class="galerie-item reveal reveal-delay-5">
+                <img src="images/gallery-06.jpg" alt="Création culinaire" loading="lazy">
+                <div class="galerie-overlay">
+                    <p class="galerie-text">L'Art Culinaire</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <div class="section-divider">
+        <svg viewBox="0 0 300 60">
+            <line x1="0" y1="30" x2="120" y2="30"/>
+            <circle cx="150" cy="30" r="4"/>
+            <line x1="180" y1="30" x2="300" y2="30"/>
+        </svg>
+    </div>
+    
+    <!-- PRESTATIONS SECTION -->
+    <section id="prestations" class="prestations-section">
+        <div class="section-header reveal">
+            <h2 class="section-title">Mes <span class="section-title-gold">Prestations</span></h2>
+            <p class="section-subtitle">Des créations sur mesure pour chaque occasion</p>
+        </div>
+        
+        <div class="prestations-grid">
+            <div class="prestation-card reveal reveal-delay-1">
+                <div class="prestation-image">
+                    <img src="images/presta-02.jpg" alt="Buffet" loading="lazy">
+                </div>
+                <div class="prestation-content">
+                    <h3 class="prestation-title">Les Buffets</h3>
+                    <p class="prestation-desc">Des buffets élégants et gourmands pour vos événements, composés de produits frais et locaux.</p>
+                </div>
+            </div>
+            
+            <div class="prestation-card reveal reveal-delay-2">
+                <div class="prestation-image">
+                    <img src="images/presta-03.jpg" alt="Assiettes" loading="lazy">
+                </div>
+                <div class="prestation-content">
+                    <h3 class="prestation-title">Les Assiettes</h3>
+                    <p class="prestation-desc">Des assiettes dressées avec soin, sublimant chaque produit pour une expérience gastronomique unique.</p>
+                </div>
+            </div>
+            
+            <div class="prestation-card reveal reveal-delay-3">
+                <div class="prestation-image">
+                    <img src="images/presta-04.jpg" alt="Dîner privé" loading="lazy">
+                </div>
+                <div class="prestation-content">
+                    <h3 class="prestation-title">Dîner Privé</h3>
+                    <p class="prestation-desc">Un restaurant étoilé chez vous, avec un menu personnalisé et un service complet.</p>
+                </div>
+            </div>
+            
+            <div class="prestation-card reveal reveal-delay-4">
+                <div class="prestation-image">
+                    <img src="images/presta-05.jpg" alt="Événements" loading="lazy">
+                </div>
+                <div class="prestation-content">
+                    <h3 class="prestation-title">Événements</h3>
+                    <p class="prestation-desc">Anniversaires, mariages, soirées d'entreprise — chaque événement mérite une cuisine d'exception.</p>
+                </div>
+            </div>
+            
+            <div class="prestation-card reveal reveal-delay-5">
+                <div class="prestation-image">
+                    <img src="images/presta-06.jpg" alt="Cuisine sur place" loading="lazy">
+                </div>
+                <div class="prestation-content">
+                    <h3 class="prestation-title">Cuisine sur Place</h3>
+                    <p class="prestation-desc">Je cuisine directement chez vous, avec des produits ultra-frais cueillis le matin même.</p>
+                </div>
+            </div>
+            
+            <div class="prestation-card reveal reveal-delay-1">
+                <div class="prestation-image">
+                    <img src="images/presta-07.jpg" alt="Dégustation" loading="lazy">
+                </div>
+                <div class="prestation-content">
+                    <h3 class="prestation-title">Soirée Dégustation</h3>
+                    <p class="prestation-desc">Accord mets et vins, découverte des saveurs de Provence dans une ambiance conviviale.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <div class="section-divider">
+        <svg viewBox="0 0 300 60">
+            <line x1="0" y1="30" x2="120" y2="30"/>
+            <circle cx="150" cy="30" r="4"/>
+            <line x1="180" y1="30" x2="300" y2="30"/>
+        </svg>
+    </div>
+    
+    <!-- TÉMOIGNAGES SECTION -->
+    <section class="temoignages-section">
+        <div class="section-header reveal">
+            <h2 class="section-title">Ils ont vécu <span class="section-title-gold">l'expérience</span></h2>
+            <p class="section-subtitle">Ce que mes clients disent de moi</p>
+        </div>
+        
+        <div class="temoignages-slider reveal reveal-delay-1">
+            <div class="temoignades-container">
+                <div class="temoignages-track" id="temoignagesTrack">
+                    <div class="temoignage-card">
+                        <div class="temoignage-stars">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                        <p class="temoignage-text">"Une soirée inoubliable. Olivier est arrivé, a tout géré, et nous avons juste profité d'un repas digne d'un grand restaurant. Merci infiniment."</p>
+                        <p class="temoignage-author">Marie & Pierre L.</p>
+                        <p class="temoignage-location">Avignon</p>
+                    </div>
+                    
+                    <div class="temoignage-card">
+                        <div class="temoignage-stars">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                        <p class="temoignage-text">"Professionnalisme exemplaire. Les produits étaient d'une fraîcheur exceptionnelle. On a redécouvert les saveurs de Provence."</p>
+                        <p class="temoignage-author">Famille Dubois</p>
+                        <p class="temoignage-location">Carpentras</p>
+                    </div>
+                    
+                    <div class="temoignage-card">
+                        <div class="temoignage-stars">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                        <p class="temoignage-text">"Parfait pour notre anniversaire de mariage. Olivier a su créer une atmosphère magique avec une cuisine somptueuse."</p>
+                        <p class="temoignage-author">Thomas & Camille</p>
+                        <p class="temoignage-location">L'Isle-sur-la-Sorgue</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="temoignages-dots">
+                <div class="temoignage-dot active" data-index="0"></div>
+                <div class="temoignage-dot" data-index="1"></div>
+                <div class="temoignage-dot" data-index="2"></div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- GOOGLE MAPS SECTION -->
+    <section class="maps-section">
+        <div class="maps-container">
+            <iframe 
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2864.1234567890123!2d5.05!3d43.9833!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x12b5e9c5e9c5e9c5%3A0x1234567890abcdef!2sPernes-les-Fontaines%2C%20France!5e0!3m2!1sfr!2sfr!4v1234567890123!5m2!1sfr!2sfr" 
+                allowfullscreen="" 
+                loading="lazy" 
+                referrerpolicy="no-referrer-when-downgrade">
+            </iframe>
+            <div class="maps-overlay"></div>
+        </div>
+    </section>
+    
+    <!-- FOOTER -->
     <footer class="footer">
         <div class="footer-content">
             <div class="footer-brand">
@@ -2788,9 +2697,9 @@
                 <ul>
                     <li><a href="#accueil">Accueil</a></li>
                     <li><a href="#experience">L'Expérience</a></li>
-                    <li><a href="#prestations">Prestations</a></li>
-                    <li><a href="#histoire">Mon Histoire</a></li>
+                    <li><a href="#prestations">Mes Prestations</a></li>
                     <li><a href="#contact">Devis</a></li>
+                    <li><a href="#histoire">Mon Histoire</a></li>
                 </ul>
                 <p style="margin-top: 1.5rem; font-size: 0.85rem; color: rgba(245, 240, 232, 0.5);">
                     <i class="fas fa-map-marker-alt" style="margin-right: 0.5rem;"></i>
@@ -2813,8 +2722,8 @@
                     <a href="mailto:contact@olivierbergeron-chef.fr">contact@olivierbergeron-chef.fr</a>
                 </p>
                 <p style="margin-top: 1rem;">
-                    <a href="#" style="font-size: 0.85rem;">Mentions légales</a> | 
-                    <a href="#" style="font-size: 0.85rem;">CGU</a>
+                    <a href="mentions-legales.html" style="font-size: 0.85rem;">Mentions légales</a> | 
+                    <a href="cgu.html" style="font-size: 0.85rem;">CGU</a>
                 </p>
             </div>
         </div>
@@ -2828,64 +2737,9 @@
     <!-- Confetti container -->
     <div class="confetti-container" id="confettiContainer"></div>
     
-    <!-- ═══════════════════════════════════════════════════════════════
-         JAVASCRIPT
-         ═══════════════════════════════════════════════════════════════ -->
+    <!-- JAVASCRIPT -->
     <script>
-        // ═══════════════════════════════════════════════════════════════
-        // CURSEUR PERSONNALISÉ
-        // ═══════════════════════════════════════════════════════════════
-        const cursor = document.querySelector('.cursor');
-        const cursorDot = document.querySelector('.cursor-dot');
-        const cursorTrail = document.querySelector('.cursor-trail');
-        
-        // Vérifier si ce n'est pas un appareil tactile
-        if (window.matchMedia('(pointer: fine)').matches) {
-            let mouseX = 0, mouseY = 0;
-            let cursorX = 0, cursorY = 0;
-            let dotX = 0, dotY = 0;
-            let trailX = 0, trailY = 0;
-            
-            document.addEventListener('mousemove', (e) => {
-                mouseX = e.clientX;
-                mouseY = e.clientY;
-            });
-            
-            function animateCursor() {
-                // Cursor principal (léger délai)
-                cursorX += (mouseX - cursorX) * 0.15;
-                cursorY += (mouseY - cursorY) * 0.15;
-                cursor.style.left = cursorX + 'px';
-                cursor.style.top = cursorY + 'px';
-                
-                // Dot (presque instantané)
-                dotX += (mouseX - dotX) * 0.5;
-                dotY += (mouseY - dotY) * 0.5;
-                cursorDot.style.left = dotX + 'px';
-                cursorDot.style.top = dotY + 'px';
-                
-                // Trail (plus de délai)
-                trailX += (mouseX - trailX) * 0.08;
-                trailY += (mouseY - trailY) * 0.08;
-                cursorTrail.style.left = trailX + 'px';
-                cursorTrail.style.top = trailY + 'px';
-                
-                requestAnimationFrame(animateCursor);
-            }
-            
-            animateCursor();
-            
-            // Effet hover sur les éléments cliquables
-            const clickables = document.querySelectorAll('a, button, .prestation-card, .galerie-item, .form-input, .form-select, .form-textarea');
-            clickables.forEach(el => {
-                el.addEventListener('mouseenter', () => cursor.classList.add('hover'));
-                el.addEventListener('mouseleave', () => cursor.classList.remove('hover'));
-            });
-        }
-        
-        // ═══════════════════════════════════════════════════════════════
         // NAVBAR SCROLL EFFECT
-        // ═══════════════════════════════════════════════════════════════
         const navbar = document.querySelector('.navbar');
         
         window.addEventListener('scroll', () => {
@@ -2896,9 +2750,7 @@
             }
         });
         
-        // ═══════════════════════════════════════════════════════════════
         // MOBILE MENU
-        // ═══════════════════════════════════════════════════════════════
         const hamburger = document.querySelector('.hamburger');
         const mobileMenu = document.querySelector('.mobile-menu');
         const mobileMenuOverlay = document.querySelector('.mobile-menu-overlay');
@@ -2927,9 +2779,7 @@
             });
         });
         
-        // ═══════════════════════════════════════════════════════════════
         // PARTICULES DORÉES
-        // ═══════════════════════════════════════════════════════════════
         const particlesContainer = document.getElementById('particles');
         const particleCount = 40;
         
@@ -2945,9 +2795,7 @@
             particlesContainer.appendChild(particle);
         }
         
-        // ═══════════════════════════════════════════════════════════════
         // INTERSECTION OBSERVER - REVEAL ANIMATIONS
-        // ═══════════════════════════════════════════════════════════════
         const revealElements = document.querySelectorAll('.reveal');
         const statItems = document.querySelectorAll('.stat-item');
         const histoireItems = document.querySelectorAll('.histoire-item');
@@ -2982,9 +2830,7 @@
             timelineObserver.observe(document.querySelector('.timeline'));
         }
         
-        // ═══════════════════════════════════════════════════════════════
         // COMPTEURS ANIMÉS
-        // ═══════════════════════════════════════════════════════════════
         const statsObserver = new IntersectionObserver((entries) => {
             entries.forEach(entry => {
                 if (entry.isIntersecting) {
@@ -3017,9 +2863,7 @@
         
         statItems.forEach(item => statsObserver.observe(item));
         
-        // ═══════════════════════════════════════════════════════════════
         // TÉMOIGNAGES SLIDER
-        // ═══════════════════════════════════════════════════════════════
         const track = document.getElementById('temoignagesTrack');
         const dots = document.querySelectorAll('.temoignage-dot');
         let currentSlide = 0;
@@ -3056,9 +2900,7 @@
         
         startAutoPlay();
         
-        // ═══════════════════════════════════════════════════════════════
         // FORMULAIRE DE DEVIS
-        // ═══════════════════════════════════════════════════════════════
         const devisForm = document.getElementById('devisForm');
         const formSuccess = document.getElementById('formSuccess');
         const formulaireContent = document.getElementById('formulaireContent');
@@ -3076,11 +2918,7 @@
             submitBtn.disabled = true;
             submitBtn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Envoi en cours...';
             
-            // Récupérer les données du formulaire
-            const formData = new FormData(devisForm);
-            const data = Object.fromEntries(formData.entries());
-            
-            // Simuler l'envoi (remplacer par l'API réelle)
+            // Simuler l'envoi
             await new Promise(resolve => setTimeout(resolve, 1500));
             
             // Afficher le message de succès
@@ -3120,9 +2958,7 @@
             e.target.value = value;
         });
         
-        // ═══════════════════════════════════════════════════════════════
         // SMOOTH SCROLL POUR LES ANCRES
-        // ═══════════════════════════════════════════════════════════════
         document.querySelectorAll('a[href^="#"]').forEach(anchor => {
             anchor.addEventListener('click', function(e) {
                 e.preventDefault();
@@ -3138,9 +2974,7 @@
             });
         });
         
-        // ═══════════════════════════════════════════════════════════════
         // EFFET PARALLAX SUBTIL SUR HERO
-        // ═══════════════════════════════════════════════════════════════
         const heroBg = document.querySelector('.hero-bg');
         
         window.addEventListener('scroll', () => {
@@ -3150,9 +2984,7 @@
             }
         });
         
-        // ═══════════════════════════════════════════════════════════════
-        // GALERIE LIGHTBOX (simple)
-        // ═══════════════════════════════════════════════════════════════
+        // GALERIE LIGHTBOX
         const galerieItems = document.querySelectorAll('.galerie-item');
         
         galerieItems.forEach(item => {
@@ -3201,29 +3033,7 @@
             });
         });
         
-        // ═══════════════════════════════════════════════════════════════
-        // PERFORMANCE: LAZY LOADING DES IMAGES
-        // ═══════════════════════════════════════════════════════════════
-        if ('IntersectionObserver' in window) {
-            const imageObserver = new IntersectionObserver((entries) => {
-                entries.forEach(entry => {
-                    if (entry.isIntersecting) {
-                        const img = entry.target;
-                        img.src = img.dataset.src || img.src;
-                        img.classList.remove('lazy');
-                        imageObserver.unobserve(img);
-                    }
-                });
-            });
-            
-            document.querySelectorAll('img[loading="lazy"]').forEach(img => {
-                imageObserver.observe(img);
-            });
-        }
-        
-        // ═══════════════════════════════════════════════════════════════
         // CONSOLE MESSAGE
-        // ═══════════════════════════════════════════════════════════════
         console.log('%c👨‍🍳 Olivier Bergeron - Chef Privé à Domicile', 'color: #C9A84C; font-size: 20px; font-weight: bold;');
         console.log('%cL\'Art Culinaire À Votre Table', 'color: #F5F0E8; font-size: 14px; font-style: italic;');
         console.log('%c📞 07 64 54 49 07', 'color: #C9A84C; font-size: 12px;');
